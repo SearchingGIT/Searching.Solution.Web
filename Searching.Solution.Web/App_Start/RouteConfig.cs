@@ -6,7 +6,9 @@ using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace Searching.Solution.Web
-{
+{/// <summary>
+/// 
+/// </summary>
     public class RouteConfig
     {
         public static void RegisterRoutes(RouteCollection routes)
