@@ -1,16 +1,21 @@
 ﻿@*using SearchingLibrary;
 @model List<Categories>*@
-
-@*<div class="ibox" ng-repeat="category in Categories">
-    <a ui-sref=".Announcing({categories_id:{{category.Categories_id}}})" style="color:#013846;">{{category.Name_Category}}</a>
-</div>*@
-<div ui-view="AnnContainer">
-
+<div class="col-md-1">
+    <div class="ibox">
+        <div class="ibox-content" style="max-width:132px" ng-repeat="category in Categories">
+            <center><a ui-sref=".Announcing({categories_id:{{category.Categories_id}}})" style="color:#013846;">{{category.Name_Category}}</a></center>
+        </div>
+    </div>
 </div>
-<h1></h1>
-<h2></h2>
-<div class="divider"></div>
+<div class="col-sm-4">
+    <div ui-view="AnnContainer">
 
-<div id="footer">
+    </div>
+    </div>
+    <h1></h1>
+    <h2></h2>
+    <div class="divider"></div>
 
-</div>
+    <div id="footer">
+
+    </div>

@@ -1,35 +1,38 @@
-﻿<div infinite-scroll="contents.NextPage()" infinite-scroll-disabled="contents.busy" infinite-scroll-distance="0">
-    <div  class="object" ng-repeat="content in contents.items">
-        <a href="index.html">
-            <div class="objectava">
-                <a href="asdezz.html">
-                    <img class="img-thumbnail img-responsive thumbnail-border" src="images/1.jpg"
-                         width="10%" height="10%" alt="Nickname" />
-                </a>
-
-            </div>
-        </a>
-        <div class="tags">
-            <a href=""><p>{{content.UserName}} {{content.UserLastName}}</p></a>
-        </div>
-        <div class="date" ng-click="AddtoSelected(content.Announcing_id)">
-            dd/mm/yyyy
-
-        </div>
-
-        <div class="advertisements">
-            <div @*ng-click="contents.ScrollTo('top')"*@  ng-click="AddtoSelected(content.Announcing_id)" class="nameadvertisements">
-                <!-- Announce title --> 
-                {{content.Name_Announcing}}
-            </div>
-
-            <!-- Announce text --> 
-            {{content.Info_Announcing}}
-
-
-
-        </div>
-
-    </div>
-    <div ng-click="contents.LoadMore()" ng-show='contents.busy'>Загрузить больше</div>
+﻿<div infinite-scroll="contents.NextPage()" infinite-scroll-disabled="contents.busy" infinite-scroll-distance="540">
+    <div class="content-container blog" ng-repeat="content in contents.items">
+        <div class="row ibox">
+            <div class="ibox-content" style="max-width:625px">
+                <div class="post" ng-click="AddtoSelected(content.Announcing_id)">
+                    <h3>#{{ content.Announcing_id }} {{content.Name_Announcing}}</h3>
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-2 text-center">
+                            <img class="img-circle m-l-5" src="images/1.jpg" width="85" height="85" alt="Nickname" />
+                        </div>
+                        <div class="col-md-8 text-center">
+                            <div class="small m-b-xs">
+                                <h4>
+                                  {{content.UserName}} {{content.UserLastName}}<br />
+                                    <span class="small">
+                                        <i class="fa fa-calendar" aria-hidden="true"></i> <span class="date">{{ content.Date_Announcing }}</span>
+                                        <i class="fa fa-eye" aria-hidden="true"></i> <span class="views">178</span>
+                                    </span>
+                                </h4>
+                            </div>
+                            <div class="post-text">
+                                {{content.Info_Announcing}}
+                            </div>
+                            <div class="row  text-right">
+                                <div class="btn-group">
+                                    <button class="btn btn-white btn-xs"><small>178</small> <i class="fa fa-thumbs-up"></i></button>
+                                    <button class="btn btn-white btn-xs"><small>21</small> <i class="fa fa-users"></i></button>
+                                    <button class="btn btn-white btn-xs"><i class="fa fa-share"></i> Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+     </div>
 </div>
+    <div ng-click="contents.LoadMore()" ng-show='contents.busy'>Загрузить больше</div>

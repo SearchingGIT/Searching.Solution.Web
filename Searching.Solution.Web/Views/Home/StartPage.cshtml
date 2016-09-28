@@ -6,14 +6,14 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://use.fontawesome.com/7410a5ef10.js"></script>
-    <link href="~/Content/style.css" rel="stylesheet" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/animate.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <title>Searching</title>
     @Styles.Render("~/bundles/css")
 </head>
-<body ng-controller="StartController">
+<body class="top-navigation" ng-controller="StartController">
     <div id="wrapper">
     <div id="page-wrapper" class="gray-bg">
         <div class="row border-bottom white-bg">
@@ -27,11 +27,11 @@
                 <div class="navbar" id="navbar">
                     <ul class="nav navbar-nav">
                         <li class="active">
-                            <a aria-expanded="false" role="button" href="/">Home</a>
+                            <a aria-expanded="false" role="button" href="/search/">Home</a>
                         </li>
                     </ul>
-                    <ul class="nav navbar-top-links navbar-right">
-                        <li><a ng-click="Clear()" ui-sref="home" style="margin-left:-300px;">Поиск</a></li>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a ng-click="Clear()" ui-sref="home">Поиск</a></li>
                         <li><a>Уведомления</a></li>
                         <li><a ui-sref="stateAnn">Сообщения</a></li>
                         <li><a href="">Подписки</a></li>
@@ -39,11 +39,11 @@
                         <li><a ui-sref="stateProfile" ng-cloak=ng-cloak ng-if="!authUser" style="">Вход</a></li>
                         <li class="dropdown" ng-cloak=ng-cloak ng-if="authUser">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                {{user.Name}}<span class="caret"></span>
+                                {{user.Name}} {{user.LastName}}<span class="caret"></span>
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="/"><i class="fa fa-btn fa-user"></i> Панель управления</a></li>
+                                <li><a href="/Profile"><i class="fa fa-btn fa-user"></i> Панель управления</a></li>
                                 <li><a ng-click="exit()" href="/"><i class="fa fa-btn fa-sign-out"></i> Выход</a></li>
                             </ul>
                         </li>
