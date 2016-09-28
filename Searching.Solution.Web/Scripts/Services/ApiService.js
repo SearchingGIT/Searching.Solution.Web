@@ -8,7 +8,7 @@
 var ApiService = function ($q, $http, localStorageService, $timeout) {
     this.GetCategories = function () {
         return $http({
-            url: 'http://192.168.100.101//api/WCFRESTService.svc/GetCategories',
+            url: 'http://searching.in.ua:1703//api/WCFRESTService.svc/GetCategories',
             method: 'GET'
         });
     };
@@ -38,7 +38,7 @@ var ApiService = function ($q, $http, localStorageService, $timeout) {
     };
     this.GetAnn = function () {
         return $http({
-            url: 'http://http://192.168.100.101//api/WCFRESTService.svc/GetAnnouncing',
+            url: 'http://searching.in.ua:1703//api/WCFRESTService.svc/GetAnnouncing',
             method: 'GET'
         });
     };
