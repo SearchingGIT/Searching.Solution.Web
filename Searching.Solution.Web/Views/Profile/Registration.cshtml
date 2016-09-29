@@ -1,22 +1,58 @@
-﻿
-<div class="registration" style="margin-right:400px;">
-    <h1>Регистрация</h1>
-    <form name="LoginForm" ng-submit="submit(LoginForm.$valid)">
-        <p><input id="login" type="email" name="email" value="" placeholder="Введите Email" required ng-model="email" /></p>
-        @*<span class="error" ng-show="LoginForm.email.$error.required">
-                Required!
-            </span>
-            <span class="error" ng-show="LoginForm.email.$error.email">
-                Not valid email!
-            </span>*@
-        <p ng-show="LoginForm.email.$invalid && !LoginForm.email.$pristine" class="help-block">Enter a valid email.</p>
-        <p><input id="pass" type="password" name="password" value="" placeholder="Пароль" ng-model="password" /></p>
-        <p><input id="comfirmpass" type="password" name="confirmPassword" value="" placeholder="Повторите пароль" ng-model="confirmPassword" check-pass="password" /></p>
-        <span ng-show="LoginForm.confirmPassword.$error.pwErr">Passwords do not match</span>
-        <p><input id="userName" type="text" name="userName" value="" placeholder="Введите Имя" ng-model="userName" required /></p>
-        <p><input id="userLastName" type="text" name="userLastName" value="" placeholder="Введите Фамилию" ng-model="userLastName" required /></p>
-        <p class="submit"><input type="submit" name="commit" value="Зарегестрироваться" /></p>
-    </form>
+﻿<div class="registration container">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>
+                Регистрация
+                <small>Все поля обязательны для заполнения</small>
+            </h5>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                    <h3 class="m-t-none m-b">Регистрация</h3>
+                    <form name="LoginForm" ng-submit="submit(LoginForm.$valid)">
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="text" id="login" name="email" placeholder="Введите ваш Email" class="form-control" required ng-model="email" />
+                            <p ng-show="LoginForm.email.$invalid && !LoginForm.email.$pristine" class="btn-danger help-block"> Введите корректный email! </p>         
+                        </div>
+                        <div class="form-group">
+                            <label>Пароль</label>
+                            <input type="text" id="pass" name="password" placeholder="Пароль" value="" class="form-control" required ng-model="password" />
+                        </div>
+                        <div class="form-group">
+                            <label>Повторите пароль</label>
+                            <input id="comfirmpass" type="text" name="confirmPassword" value="" class="form-control" placeholder="Повторите пароль" ng-model="confirmPassword" check-pass="password" />
+                        </div>
+                        <center><span class="btn-danger help-block" ng-show="LoginForm.confirmPassword.$error.pwErr"> Введенные пароли не совпадают! </span></center>
+                        <div class="form-group">
+                            <label>Ваше имя</label>
+                            <input id="userName" type="text" name="userName" value="" placeholder="Введите имя" class="form-control" ng-model="userName" required />
+                        </div>
+                        <div class="form-group">
+                            <label>Ваша фамилия</label>
+                            <input id="userLastName" type="text" name="userLastName" value="" placeholder="Введите фамилию" class="form-control" ng-model="userLastName" required />
+                        </div>
+
+                        
+
+                        <div>
+                            <button class="btn btn-sm btn-primary pull-right m-t-n-xs btn-block" type="submit" name="commit">
+                                <strong>Создать аккаунт</strong>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-6">
+                    <h4>У вас уже есть аккаунт?</h4>
+                    <p>Перейдите к форме входа</p>
+                    <p class="text-center">
+                        <a href="/login"><i class="fa big-icon fa-sign-in"></i></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 
