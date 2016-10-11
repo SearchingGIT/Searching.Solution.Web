@@ -21,5 +21,10 @@ namespace Searching.Solution.Web.Controllers
             return View();
         }
 
+        public ActionResult Messages()
+        {
+            return View();
+        }
+
     }
 }

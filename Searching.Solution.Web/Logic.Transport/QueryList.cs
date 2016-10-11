@@ -30,6 +30,15 @@ namespace Searching.Solution.Web.Logic.Transport
             List<Announcing> la = JsonConvert.DeserializeObject<List<Announcing>>(result);
             return la;
         }
+
+        public static async Task<List<Announcing>> GetMyAnnouncing(int _id )
+        {
+            var param = JsonConvert.SerializeObject(new { id = _id });
+            var result = await AccessService.ServiceCalled("POST", "GetMyAnnouncing", param);
+            List<Announcing> MyAnn = JsonConvert.DeserializeObject<List<Announcing>>(result);
+            return MyAnn;
+        }
+
         public static async Task<List<Cities>> GetCityForCountry(string country_id)
         {
             var result = await AccessService.ServiceCalled("POST", "GetCityForCountry", country_id);

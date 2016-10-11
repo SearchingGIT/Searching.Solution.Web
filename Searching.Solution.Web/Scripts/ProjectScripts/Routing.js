@@ -127,7 +127,11 @@ var configFunction = function ($stateProvider, $httpProvider, $locationProvider,
         templateUrl: 'Home/StartPage',
         views: {
             "ContentContainer": {
-                templateUrl: '/Navigation/Messages'
+                templateUrl: '/Navigation/Messages',
+                controller: MessageController,
+                resolve: {
+                    factory: AuthService
+                }       
             }
         }
     })

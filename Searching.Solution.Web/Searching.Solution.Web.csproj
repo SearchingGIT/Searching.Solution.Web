@@ -216,6 +216,7 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\Controllers\AnnController.js" />
     <Content Include="Scripts\Controllers\LoadController.js" />
+    <Content Include="Scripts\Controllers\MessageController.js" />
     <Content Include="Scripts\Controllers\ProfileController.js" />
     <Content Include="Scripts\Controllers\LoginController.js" />
     <Content Include="Scripts\Controllers\RegistrationController.js" />

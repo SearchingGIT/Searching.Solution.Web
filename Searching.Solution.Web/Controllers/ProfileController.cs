@@ -29,6 +29,13 @@ namespace Searching.Solution.Web.Controllers
             return Json(ul);
         }
 
+        public async Task<ActionResult> GetMyAnnouncing(int id)
+        {
+            List<Announcing> annList = new List<Announcing>();
+            annList = await QueryList.GetMyAnnouncing(id);
+            return Json(annList);
+        }
+
         public ActionResult Registration()
         {
             return View();

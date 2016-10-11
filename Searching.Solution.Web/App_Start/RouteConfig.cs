@@ -92,6 +92,16 @@ namespace Searching.Solution.Web
             defaults: new { controller = "Ann", action = "AddtoSelected", ann = UrlParameter.Optional });
 
             routes.MapRoute(
+            name: "Messages",
+            url: "Navigation/Messages",
+            defaults: new { controller = "Navigation", action = "Messages", ann = UrlParameter.Optional });
+
+            routes.MapRoute(
+            name: "GetMyAnnouncing",
+            url: "Profile/GetMyAnnouncing/{id}",
+            defaults: new { controller = "Profile", action = "GetMyAnnouncing", id = UrlParameter.Optional });
+
+            routes.MapRoute(
                  name: "Default",
                  url: "{*url}",
                  //url:"{controller}/{action}",

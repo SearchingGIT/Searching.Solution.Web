@@ -8,7 +8,7 @@ app.controller('ProfileController', ProfileController);
 app.controller('LoginController', LoginController);
 app.controller('RegistrationController', RegistrationController);
 app.controller('LoadController', LoadController);
-
+app.controller('MessageController', MessageController);
 
 
 
