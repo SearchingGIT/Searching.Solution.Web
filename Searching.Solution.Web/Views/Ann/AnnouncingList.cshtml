@@ -1,9 +1,8 @@
 ﻿<div infinite-scroll="contents.NextPage()" infinite-scroll-distance="540">
-    <div class="well" ng-repeat="content in contents.items" style="max-height:175px; max-width:600px;">
+    <div class="ads" ng-repeat="content in contents.items" style="max-height:175px; max-width:600px; margin-top: 10px;">
                 <div class="post" ng-click="AddtoSelected(content.Announcing_id)">
                     <p class="text-uppercase">#{{ content.Announcing_id }} {{content.Name_Announcing}}</p>
                     <div class="row">
-                        <div class="col-md-1"></div>
                         <div class="col-md-2 text-center">
                             <img class="img-circle m-l-5" src="images/1.jpg" width="85" height="85" alt="Nickname" />
                         </div>

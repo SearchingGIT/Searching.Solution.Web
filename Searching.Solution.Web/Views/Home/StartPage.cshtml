@@ -25,10 +25,8 @@
                                 </li>
                             </ul>
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a ng-click="Clear()" ui-sref="home">Поиск</a></li>
-                                <li><a>Уведомления</a></li>
-                                <li><a ui-sref="Messages">Сообщения</a></li>
-                                <li><a ui-sref="Messages">Подписки</a></li>
+                                <li><a ui-sref="Messages"><i class="fa fa-envelope"></i></a></li>
+                                <li><a ui-sref="Messages"><i class="fa fa-flag"></i></a></li>
                                 <!-- Authentication Links -->
                                 <li><a ui-sref="stateProfile" ng-cloak=ng-cloak ng-if="!authUser" style="">Вход</a></li>
                                 <li class="dropdown" ng-cloak=ng-cloak ng-if="authUser">
@@ -45,6 +43,27 @@
                     </div>
                 </div>
             </div>
+    </div>
+    <div class="sidebar">
+        <div class="dropdown-sb">
+            <span class="label">Поиск</span>
+            <button class="dropbtn"><a ng-click="Clear()" ui-sref="home"><i class="fa fa-search fa-2x"></i></a></button>
+        </div>
+        <br />
+        <div class="dropdown-sb">
+            <span class="label">Уведомления</span>
+            <button class="dropbtn"><a ng-click="Clear()" ui-sref=""><i class="fa fa-bell fa-2x"></i></a></button>
+        </div>
+        <br />
+        <div class="dropdown-sb">
+            <span class="label">Сообщения</span>
+            <button class="dropbtn"><a ng-click="Clear()" ui-sref=""><i class="fa fa-envelope fa-2x"></i></a></button>
+            <div class="dropdown-content">
+                <a href="#">Присланные</a>
+                <a href="#">Отправленные</a>
+                <a href="#">История</a>
+            </div>
+        </div>
     </div>
     <div class="row content" style="min-height:900px; margin-top:50px;">
     <div ui-view="ContentContainer"></div>
