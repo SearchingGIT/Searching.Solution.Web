@@ -256,11 +256,12 @@
     <Content Include="Views\Home\StartPage.cshtml" />
     <Content Include="Views\Home\Test.cshtml" />
     <Content Include="Views\Navigation\Search.cshtml" />
+    <Content Include="Views\Search\AnnouncingList.cshtml" />
     <Content Include="Views\Navigation\Profile.cshtml" />
     <Content Include="Views\Profile\Login.cshtml" />
     <Content Include="Views\Profile\Registration.cshtml" />
+    <Content Include="Views\Search\Test.cshtml" />
     <Content Include="Views\Ann\AnnouncingList.cshtml" />
-    <Content Include="Views\Navigation\Messages.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

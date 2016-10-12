@@ -1,0 +1,22 @@
+﻿<div class="registration" style="margin-right:400px;">
+    <h1>Регистрация</h1>
+    <form name="LoginForm" ng-submit="submit(LoginForm.$valid)">
+        <p><input id="login" type="email" name="email" value="" placeholder="Введите Email" required ng-model="email" /></p>
+        @*<span class="error" ng-show="LoginForm.email.$error.required">
+                Required!
+            </span>
+            <span class="error" ng-show="LoginForm.email.$error.email">
+                Not valid email!
+            </span>*@
+        <p ng-show="LoginForm.email.$invalid && !LoginForm.email.$pristine" class="help-block">Enter a valid email.</p>
+        <p><input id="pass" type="password" name="password" value="" placeholder="Пароль" ng-model="password" /></p>
+        <p><input id="comfirmpass" type="password" name="confirmPassword" value="" placeholder="Повторите пароль" ng-model="confirmPassword" check-pass="password" /></p>
+        <span ng-show="LoginForm.confirmPassword.$error.pwErr">Passwords do not match</span>
+        <p><input id="userName" type="text" name="userName" value="" placeholder="Введите Имя" ng-model="userName" required /></p>
+        <p><input id="userLastName" type="text" name="userLastName" value="" placeholder="Введите Фамилию" ng-model="userLastName" required /></p>
+        <p class="submit"><input type="submit" name="commit" value="Зарегестрироваться" /></p>
+    </form>
+</div>
+
+
+

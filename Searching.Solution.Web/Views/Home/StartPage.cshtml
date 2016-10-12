@@ -13,47 +13,67 @@
     <title>Searching</title>
     @Styles.Render("~/bundles/css")
 </head>
-<body ng-controller="StartController">
-    <div class="row top-navigation">
-            <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-                <div class="container">
-                    <div class="navbar-header">
-                        <div class="collapse navbar-collapse">
-                            <ul class="nav navbar-nav">
-                                <li class="active">
-                                    <a aria-expanded="false" role="button" href="/search/">Главная</a>
-                                </li>
-                            </ul>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a ng-click="Clear()" ui-sref="home">Поиск</a></li>
-                                <li><a>Уведомления</a></li>
-                                <li><a ui-sref="Messages">Сообщения</a></li>
-                                <li><a ui-sref="Messages">Подписки</a></li>
-                                <!-- Authentication Links -->
-                                <li><a ui-sref="stateProfile" ng-cloak=ng-cloak ng-if="!authUser" style="">Вход</a></li>
-                                <li class="dropdown" ng-cloak=ng-cloak ng-if="authUser">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                        {{user.Name}} {{user.LastName}}<span class="caret"></span>
-                                    </a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="/Profile"><i class="fa fa-btn fa-user"></i> Панель управления</a></li>
-                                        <li><a ng-click="exit()" href="/"><i class="fa fa-btn fa-sign-out"></i> Выход</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+<body class="top-navigation" ng-controller="StartController">
+    <div id="wrapper">
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom white-bg">
+            <nav class="navbar navbar-static-top" role="navigation">
+                <div class="navbar-header">
+                    <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                        <i class="fa fa-reorder"></i>
+                    </button>
+                    <a href="/" class="navbar-brand">Searching</a>
                 </div>
-            </div>
-    </div>
-    <div class="row content" style="min-height:900px; margin-top:50px;">
-    <div ui-view="ContentContainer"></div>
-    </div>
+                <div class="navbar" id="navbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a aria-expanded="false" role="button" href="/search/">Home</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a ng-click="Clear()" ui-sref="home">Поиск</a></li>
+                        <li><a>Уведомления</a></li>
+                        <li><a ui-sref="stateAnn">Сообщения</a></li>
+                        <li><a href="">Подписки</a></li>
+                        <!-- Authentication Links -->
+                        <li><a ui-sref="stateProfile" ng-cloak=ng-cloak ng-if="!authUser" style="">Вход</a></li>
+                        <li class="dropdown" ng-cloak=ng-cloak ng-if="authUser">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                {{user.Name}} {{user.LastName}}<span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/Profile"><i class="fa fa-btn fa-user"></i> Панель управления</a></li>
+                                <li><a ng-click="exit()" href="/"><i class="fa fa-btn fa-sign-out"></i> Выход</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+       
+        <div ui-view="ContentContainer" id="content" style="">
+
+        </div>
+
+        <div ui-view="AnntContainer" id="content" style="">
+
+        </div>
+        <div>
+            <ng-view>
+
+            </ng-view>
+        </div>
             <div class="footer">
                 <div>
-                    <strong>Copyright</strong> Llimpint &copy; 2016
+                    <strong>Copyright</strong> &copy; 2016
                 </div>
             </div>
+
+        </div>
+    </div> 
+    
+   
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.min.js"></script>

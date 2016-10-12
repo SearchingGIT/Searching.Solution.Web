@@ -1,7 +1,9 @@
-﻿<div infinite-scroll="contents.NextPage()" infinite-scroll-distance="540">
-    <div class="well" ng-repeat="content in contents.items" style="max-height:175px; max-width:600px;">
+﻿<div infinite-scroll="contents.NextPage()" infinite-scroll-disabled="contents.busy" infinite-scroll-distance="540">
+    <div class="content-container blog" ng-repeat="content in contents.items">
+        <div class="row ibox">
+            <div class="ibox-content" style="max-width:625px">
                 <div class="post" ng-click="AddtoSelected(content.Announcing_id)">
-                    <p class="text-uppercase">#{{ content.Announcing_id }} {{content.Name_Announcing}}</p>
+                    <h3>#{{ content.Announcing_id }} {{content.Name_Announcing}}</h3>
                     <div class="row">
                         <div class="col-md-1"></div>
                         <div class="col-md-2 text-center">
@@ -30,6 +32,7 @@
                         </div>
                     </div>
                 </div>
-    </div>
+            </div> 
+     </div>
 </div>
     <div ng-click="contents.LoadMore()" ng-show='contents.busy'>Загрузить больше</div>
