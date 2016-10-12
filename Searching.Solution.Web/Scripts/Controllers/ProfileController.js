@@ -23,6 +23,12 @@ var ProfileController = function (factory, $q, $location, $timeout, ApiService, 
         CheckAuthService.falseStatus();
         
     }
+    $scope.GetMyAnnouncing = function () {
+        ApiService.GetMyAnnouncing(1)
+       .success(function (response) {
+           $scope.MyAnn = response;
+       });
+    }
 
     $scope.test = function () {
         if($scope.testIf==true)

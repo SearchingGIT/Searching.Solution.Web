@@ -121,6 +121,20 @@ var configFunction = function ($stateProvider, $httpProvider, $locationProvider,
             }
         }
     })
+
+    .state('Messages', {
+        url: '/messages',
+        templateUrl: 'Home/StartPage',
+        views: {
+            "ContentContainer": {
+                templateUrl: '/Navigation/Messages',
+                controller: MessageController,
+                resolve: {
+                    factory: AuthService
+                }       
+            }
+        }
+    })
 }
 configFunction.$inject = ['$stateProvider', '$httpProvider', '$locationProvider','$routeProvider'];
 app.config(configFunction);

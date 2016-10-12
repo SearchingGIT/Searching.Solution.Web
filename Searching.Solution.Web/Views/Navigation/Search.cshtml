@@ -1,21 +1,11 @@
 ﻿@*using SearchingLibrary;
 @model List<Categories>*@
-<div class="col-md-1">
-    <div class="ibox">
-        <div class="ibox-content" style="max-width:132px" ng-repeat="category in Categories">
-            <center><a ui-sref=".Announcing({categories_id:{{category.Categories_id}}})" style="color:#013846;">{{category.Name_Category}}</a></center>
+<div class="col-sm-2"></div>
+    <div class="col-sm-2 text-center">
+        <div class="btn-group-vertical" style="position:fixed; margin-top: 10px;">
+            <a ui-sref=".Announcing({categories_id:{{category.Categories_id}}})" class="btn btn-default" role="button" ng-repeat="category in Categories">{{category.Name_Category}}</a>
         </div>
     </div>
-</div>
-<div class="col-sm-4">
-    <div ui-view="AnnContainer">
-
-    </div>
-    </div>
-    <h1></h1>
-    <h2></h2>
-    <div class="divider"></div>
-
-    <div id="footer">
-
+    <div class="col-sm-4">
+        <div ui-view="AnnContainer"></div>
     </div>

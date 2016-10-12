@@ -104,5 +104,15 @@ var ApiService = function ($q, $http, localStorageService, $timeout) {
             data: { ann: selectedAnn }
         });
     }
+    this.GetMyAnnouncing = function (id) {
+        return $http({
+            url: 'http://localhost:14396/Profile/GetMyAnnouncing',
+            headers: {
+                'Content-Type': 'application/json; charset=utf-8'
+            },
+            method: 'POST',
+            data: { id: id }
+        });
+    }
 };
 ApiService.$inject = ['$q','$http','localStorageService','$timeout'];
