@@ -233,6 +233,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\ProjectScripts\App.js" />
     <Content Include="Scripts\Directions\CheckPass.js" />
+    <Content Include="Scripts\ProjectScripts\convertDateStringsToDates.js" />
     <Content Include="Scripts\ProjectScripts\Scroll.js" />
     <Content Include="Scripts\ProjectScripts\testDirective.js" />
     <Content Include="Scripts\ProjectScripts\Variables.js" />
