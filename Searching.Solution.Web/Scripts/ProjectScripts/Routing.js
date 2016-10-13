@@ -1,9 +1,9 @@
 ﻿
 var configFunction = function ($stateProvider, $httpProvider, $locationProvider, $routeProvider) {
-    $httpProvider.defaults.transformResponse.push(function (responseData) {
-        convertDateStringsToDates(responseData);
-        return responseData;
-    });
+    //$httpProvider.defaults.transformResponse.push(function (responseData) {
+    //    convertDateStringsToDates(responseData);
+    //    return responseData;
+    //});
     //var newBaseUrl = "";
     //if (window.location.hostname == "localhost") {
     //    newBaseUrl = "http://localhost:14396/Scripts";
