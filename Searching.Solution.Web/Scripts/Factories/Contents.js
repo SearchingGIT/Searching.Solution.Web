@@ -32,10 +32,10 @@
 
           console.log('length', response.length);
           for (var i = 0; i < response.length; i++) {
-              var testDate = new Date(Date.parse(response[i]['Date_Announcing']));
+              //var testDate = new Date(Date.parse(response[i]['Date_Announcing']));
               //var testDate = new Date(parseInt(response[i]['Date_Announcing']));
               //var testDate = new Date(parseInt(response[i]['Date_Announcing'].substr(6)));
-              response[i]['Date_Announcing'] = testDate;
+              //response[i]['Date_Announcing'] = testDate;
               this.items.push(response[i]);
               
           }

@@ -30,3 +30,9 @@ app.directive("scroll", scroll);
 
 //factories
 app.service('Contents', Contents);
+
+//filters
+app.filter("DateFilter",DateFilter);
+
+
+

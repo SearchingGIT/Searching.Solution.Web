@@ -1,7 +1,8 @@
 ﻿
 var configFunction = function ($stateProvider, $httpProvider, $locationProvider, $routeProvider) {
     //$httpProvider.defaults.transformResponse.push(function (responseData) {
-    //    convertDateStringsToDates(responseData);
+    //    convertJsonDateToDates(responseData);
+    //   // console.log('--------------response data:',responseData);
     //    return responseData;
     //});
     //var newBaseUrl = "";
