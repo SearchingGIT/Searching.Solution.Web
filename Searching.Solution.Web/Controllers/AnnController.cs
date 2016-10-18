@@ -44,5 +44,31 @@ namespace Searching.Solution.Web.Controllers
             result = await QueryList.AddtoFavorite(ann);
             return Json(result);
         }
+
+        public async Task<ActionResult>GetCountries()
+        {
+            List<Country> lc = new List<Country>();
+            lc = await QueryList.GetCountries();
+            return Json(lc);
+        }
+        public async Task<ActionResult> GetCityOfCountries(int country_id)
+        {
+            List<Cities> lc = new List<Cities>();
+            lc = await QueryList.GetCityForCountry(country_id);
+            return Json(lc);
+        }
+        public async Task<ActionResult>GetAreasOfCity(int city_id)
+        {
+            List<AreasOfCity> la = new List<AreasOfCity>(city_id);
+            la = await QueryList.GetAreasOfCity(city_id);
+            return Json(la);
+        }
+
+        public async Task<ActionResult> AddAnnouncing(Announcing ann)
+        {
+            ReturnValue result = new ReturnValue();
+            result = await QueryList.AddAnnouncing(ann);
+            return Json(result);
+        }
     }
 }

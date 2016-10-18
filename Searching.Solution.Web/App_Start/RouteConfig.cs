@@ -102,6 +102,27 @@ namespace Searching.Solution.Web
             defaults: new { controller = "Profile", action = "GetMyAnnouncing", id = UrlParameter.Optional });
 
             routes.MapRoute(
+            name: "GetAreasOfCity",
+            url: "Ann/GetAreasOfCity/{city_id}",
+            defaults: new { controller = "Ann", action = "GetAreasOfCity", city_id = UrlParameter.Optional });
+
+            routes.MapRoute(
+            name: "GetCityOfCountries",
+            url: "Ann/GetCityOfCountries/{country_id}",
+            defaults: new { controller = "Ann", action = "GetCityOfCountries", country_id = UrlParameter.Optional });
+
+            routes.MapRoute(
+            name: "GetCountries",
+            url: "Ann/GetCountries",
+            defaults: new { controller = "Ann", action = "GetCountries" });
+
+
+            routes.MapRoute(
+            name: "AddAnnouncing",
+            url: "Ann/AddAnnouncing/{ann}",
+            defaults: new { controller = "Ann", action = "AddAnnouncing", ann = UrlParameter.Optional });
+
+            routes.MapRoute(
                  name: "Default",
                  url: "{*url}",
                  //url:"{controller}/{action}",

@@ -39,16 +39,18 @@ namespace Searching.Solution.Web.Logic.Transport
             return MyAnn;
         }
 
-        public static async Task<List<Cities>> GetCityForCountry(string country_id)
+        public static async Task<List<Cities>> GetCityForCountry(int country_id)
         {
-            var result = await AccessService.ServiceCalled("POST", "GetCityForCountry", country_id);
+            var param = JsonConvert.SerializeObject(new { country_id = country_id });
+            var result = await AccessService.ServiceCalled("POST", "GetCityForCountry", param);
             List<Cities> cities = JsonConvert.DeserializeObject<List<Cities>>(result);
             return cities;
         }
 
-        public static async Task<List<AreasOfCity>> GetAreasOfCity(string city_id)
+        public static async Task<List<AreasOfCity>> GetAreasOfCity(int city_id)
         {
-            var result = await AccessService.ServiceCalled("POST", "GetAreasOfCity", city_id);
+            var param = JsonConvert.SerializeObject(new { City_id = city_id });
+            var result = await AccessService.ServiceCalled("POST", "GetAreasOfCity", param);
             List<AreasOfCity> areasList = JsonConvert.DeserializeObject<List<AreasOfCity>>(result);
             return areasList;
         }
@@ -116,5 +118,15 @@ namespace Searching.Solution.Web.Logic.Transport
              returnV = JsonConvert.DeserializeObject<ReturnValue>(result);
             return returnV;
         }
+
+        public static async Task<ReturnValue> AddAnnouncing(Announcing _ann)
+        {
+            ReturnValue result = new ReturnValue();
+            var param = JsonConvert.SerializeObject(new { ann = _ann });
+            var jsonResult = await AccessService.ServiceCalled("POST", "AddAnnouncing", param);
+            result = JsonConvert.DeserializeObject<ReturnValue>(jsonResult);
+            return result;
+        }
+
     }
 }

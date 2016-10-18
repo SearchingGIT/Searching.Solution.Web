@@ -8,6 +8,21 @@ var LoginUser = function(){
     this.Password = null
 };
 
+var Ann = function () {
+    this.UserName=null,
+    this.UserLastName=null,
+    this.Name_City=null,
+    this.Announcing_id=null,
+    this.Name_Announcing=null,
+    this.Phone_Announcing=null,
+    this.Date_Announcing=null,
+    this.Info_Announcing=null,
+    this.Categories_id=null,
+    this.City_id=null,
+    this.User_id=null,
+    this.Areas_id=null
+    this.JsonDate_Announcing=null
+};
 //var user = {
 //    User_id: null,
 //    Mail: null,

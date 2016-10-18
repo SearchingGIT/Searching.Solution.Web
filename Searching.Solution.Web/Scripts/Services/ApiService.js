@@ -42,6 +42,12 @@ var ApiService = function ($q, $http, localStorageService, $timeout) {
             method: 'GET'
         });
     };
+    this.GetCountryList = function () {
+        return $http({
+            url: 'http://searching.in.ua:1703/api/WCFRESTService.svc/GetCountryList',
+            method: 'GET'
+        });
+    };
     this.GetAnnFull = function (ann_id) {
         return $http({
             url: 'http://localhost:14396/Ann/GetAnnFull',
@@ -112,6 +118,39 @@ var ApiService = function ($q, $http, localStorageService, $timeout) {
             },
             method: 'POST',
             data: { id: id }
+        });
+    }
+
+    this.GetAreasOfCity = function (id) {
+        return $http({
+            url: 'http://localhost:14396/Ann/GetAreasOfCity',
+            headers: {
+                'Content-Type': 'application/json; charset=utf-8'
+            },
+            method: 'POST',
+            data: { city_id: id }
+        });
+    }
+
+    this.GetCityOfCountries = function (id) {
+        return $http({
+            url: 'http://localhost:14396/Ann/GetCityOfCountries',
+            headers: {
+                'Content-Type': 'application/json; charset=utf-8'
+            },
+            method: 'POST',
+            data: { country_id: id }
+        });
+    }
+
+    this.AddAnnouncing = function (ann) {
+        return $http({
+            url: 'http://localhost:14396/Ann/AddAnnouncing',
+            headers: {
+                'Content-Type': 'application/json; charset=utf-8'
+            },
+            method: 'POST',
+            data: { ann: ann }
         });
     }
 };
