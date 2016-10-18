@@ -63,12 +63,7 @@ body {
     background-color: #009dc7;
     color: white;
 }
-.ads {
-    color: #6c7b88;
-    background-color: #f4f7f8;
-    border-width: 2px !important;
-    border-color: #ffffff !important;
-}
+
 * {
     transition    : all 0.1s ease-in-out;
     -o-transition       : all 0.1s ease-in-out;
@@ -213,4 +208,33 @@ body {
     padding-top: 8px !important;
     padding-right: 12px !important;
     padding-left: 11px !important;
+}
+
+/* Объявления */
+
+.gallery-ads-vip {
+    min-width: 1070px;
+    min-height: 900px;
+}
+
+.ads-text-container {
+    margin: 0 15px 0 15px;
+    width: 170px;
+    height: 35px;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.ads {
+    color: #6c7b88;
+    background-color: #f4f7f8;
+    border-width: 2px !important;
+    border-color: #ffffff !important;
+    max-height:400px; 
+    max-width:200px; 
+    min-height:230px; 
+    min-width:170px; 
+    margin: 15px; 
+    display: inline-block;
+    padding: 15px;
 }

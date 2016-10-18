@@ -127,7 +127,7 @@ var Filter = function(){
    this.Popular= null,
    this.DateSort= null,
     this.nPage= 1,
-    this.sizePage= 3
+    this.sizePage= 8
 };
 
 var clearFilter = {
@@ -142,5 +142,5 @@ var clearFilter = {
     Popular: null,
     DateSort: null,
     nPage: 1,
-    sizePage: 3
+    sizePage: 8
 };
