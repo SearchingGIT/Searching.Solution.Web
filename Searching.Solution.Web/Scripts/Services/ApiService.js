@@ -153,5 +153,38 @@ var ApiService = function ($q, $http, localStorageService, $timeout) {
             data: { ann: ann }
         });
     }
+
+    this.DeleteAnnouncing = function (id) {
+        return $http({
+            url: 'http://localhost:14396/Ann/DeleteAnnouncing',
+            headers: {
+                'Content-Type': 'application/json; charset=utf-8'
+            },
+            method: 'POST',
+            data: { id: id }
+        });
+    }
+
+    this.AddMessage = function (msg) {
+        return $http({
+            url: 'http://localhost:14396/Message/AddMessage',
+            headers: {
+                'Content-Type': 'application/json; charset=utf-8'
+            },
+            method: 'POST',
+            data: { msg: msg }
+        });
+    }
+
+    this.EditProfile = function (user) {
+        return $http({
+            url: 'http://localhost:14396/Profile/EditProfile',
+            headers: {
+                'Content-Type': 'application/json; charset=utf-8'
+            },
+            method: 'POST',
+            data: { user: user }
+        });
+    }
 };
 ApiService.$inject = ['$q','$http','localStorageService','$timeout'];

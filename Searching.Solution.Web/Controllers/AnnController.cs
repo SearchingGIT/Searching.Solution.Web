@@ -70,5 +70,11 @@ namespace Searching.Solution.Web.Controllers
             result = await QueryList.AddAnnouncing(ann);
             return Json(result);
         }
+        public async Task<ActionResult>DeleteAnnouncing(int id)
+        {
+            ReturnValue result = new ReturnValue();
+            result = await QueryList.DeleteAnnouncing(id);
+            return Json(result);
+        }
     }
 }

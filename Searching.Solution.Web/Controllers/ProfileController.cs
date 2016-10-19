@@ -48,5 +48,12 @@ namespace Searching.Solution.Web.Controllers
             return Json(value);
         }
 
+        public async Task<ActionResult> EditProfile(UserList user)
+        {
+            ReturnValue result = new ReturnValue();
+            result = await QueryList.EditProfile(user);
+            return Json(result);
+        }
+
     }
 }
