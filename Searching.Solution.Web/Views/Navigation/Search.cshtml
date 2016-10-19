@@ -1,9 +1,14 @@
-﻿<div class="col-md-2"></div>
-    <div class="col-md-2">
-        <div class="btn-group-vertical" style="position:fixed; margin-top: 10px;">
+﻿<div class="row content" style="margin-top: 150px;"> 
+    <div class="col-md-2"></div>
+        <div class="panel col-md-8">
             <a ui-sref=".Announcing({categories_id:{{category.Categories_id}}})" class="btn btn-categories" role="button" ng-repeat="category in Categories">{{category.Name_Category}}</a>
         </div>
-    </div>
-    <div class="col-md-4">
+    <div class="col-md-2"></div>
+</div>
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
         <div ui-view="AnnContainer"></div>
     </div>
+    <div class="col-md-2"></div>
+</div>

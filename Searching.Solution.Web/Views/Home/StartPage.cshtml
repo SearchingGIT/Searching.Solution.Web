@@ -14,6 +14,7 @@
     @Styles.Render("~/bundles/css")
 </head>
 <body ng-controller="StartController">
+     <!-- Start Header -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -22,20 +23,21 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">LOGO</a>
+                <div class="branding">
+                    <ul nav navbar-nav class="list-inline" style="margin-bottom:0px;">
+                        <li><a href="/search/"><img class="nav-logo" src="~/images/logo.png" /></a></li>
+                    </ul>
+                </div>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a class="nav-text-item" aria-expanded="false" href="/search/">Главная</a></li>
-                </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li ng-cloak=ng-cloak ng-if="authUser"><a class="nav-img-item" ui-sref="Messages"><i class="fa fa-envelope navigation-icon fa-2x"></i></a></li>
                     <li ng-cloak=ng-cloak ng-if="authUser"><a class="nav-img-item" ui-sref="Messages"><i class="fa fa-flag navigation-icon fa-2x"></i></a></li>
                     <li class="active" ng-cloak=ng-cloak ng-if="!authUser"><a class="nav-img-item" ui-sref="stateProfile" style=""><i class="fa fa-sign-in fa-2x"></i></a></li>
-                    <li class="dropdown active" ng-cloak=ng-cloak ng-if="authUser">
+                    <li class="dropdown" ng-cloak=ng-cloak ng-if="authUser">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                             <div class="text-uppercase">
-                                <img class="img-circle navbar-img" src="images/1.jpg" width="50" height="50" style="padding:5px;"/>
+                                <img class="img-circle navbar-img" src="images/1.jpg" width="50" height="50" style="padding:5px;" />
                                 <b class="nav-profile-item">{{user.Name}} {{user.LastName}} <i class="fa fa-mouse-pointer"></i></b>
                             </div>
                         </a>
@@ -48,6 +50,7 @@
             </div>
         </div>
     </nav>
+    <!-- End Header -->
     <div class="sidebar">
         <div class="dropdown-sb">
             <span class="label" style="margin-left:35px">Поиск</span>
@@ -69,7 +72,7 @@
             </div>
         </div>
     </div>
-    <div class="row content" style="min-height:900px; margin-top:50px;">
+    <div class="content" style="margin-top:50px;">
     <div ui-view="ContentContainer"></div>
     </div>
     <div class="footer">
