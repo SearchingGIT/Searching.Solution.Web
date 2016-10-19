@@ -349,7 +349,6 @@ C:\Repository\projects\Searching1\Sourse Code\Searching.Solution.Web\Searching.S
 C:\Repository\projects\Searching1\Sourse Code\Searching.Solution.Web\Searching.Solution.Web\bin\System.Web.WebPages.Razor.dll
 C:\Repository\projects\Searching1\Sourse Code\Searching.Solution.Web\Searching.Solution.Web\bin\WebGrease.dll
 C:\Repository\projects\Searching1\Sourse Code\Searching.Solution.Web\Searching.Solution.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Repository\projects\Searching1\Sourse Code\Searching.Solution.Web\Searching.Solution.Web\bin\Searching.Shared.ModelClasses.pdb
 C:\Repository\projects\Searching1\Sourse Code\Searching.Solution.Web\Searching.Solution.Web\bin\System.Web.Helpers.xml
 C:\Repository\projects\Searching1\Sourse Code\Searching.Solution.Web\Searching.Solution.Web\bin\System.Web.Mvc.xml
 C:\Repository\projects\Searching1\Sourse Code\Searching.Solution.Web\Searching.Solution.Web\bin\System.Web.Optimization.xml
@@ -375,4 +374,3 @@ C:\Repository\projects\Searching1\Sourse Code\Searching.Solution.Web\Searching.S
 C:\Repository\projects\Searching1\Sourse Code\Searching.Solution.Web\Searching.Solution.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Repository\projects\Searching1\Sourse Code\Searching.Solution.Web\Searching.Solution.Web\obj\Debug\Searching.Solution.Web.dll
 C:\Repository\projects\Searching1\Sourse Code\Searching.Solution.Web\Searching.Solution.Web\obj\Debug\Searching.Solution.Web.pdb
-C:\Repository\projects\Searching1\Sourse Code\Searching.Solution.Web\Searching.Solution.Web\obj\Debug\Searching.Solution.Web.csprojResolveAssemblyReference.cache
