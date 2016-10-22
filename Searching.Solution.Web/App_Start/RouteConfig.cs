@@ -123,6 +123,21 @@ namespace Searching.Solution.Web
             defaults: new { controller = "Ann", action = "AddAnnouncing", ann = UrlParameter.Optional });
 
             routes.MapRoute(
+            name: "DeleteAnnouncing",
+            url: "Ann/DeleteAnnouncing/{id}",
+            defaults: new { controller = "Ann", action = "DeleteAnnouncing", id = UrlParameter.Optional });
+
+            routes.MapRoute(
+            name: "AddMessage",
+            url: "Message/AddMessage/{msg}",
+            defaults: new { controller = "Message", action = "DeleteAnnouncing", msg = UrlParameter.Optional });
+
+            routes.MapRoute(
+           name: "EditProfile",
+           url: "Profile/EditProfile/{user}",
+           defaults: new { controller = "Profile", action = "EditProfile", user = UrlParameter.Optional });
+
+            routes.MapRoute(
                  name: "Default",
                  url: "{*url}",
                  //url:"{controller}/{action}",

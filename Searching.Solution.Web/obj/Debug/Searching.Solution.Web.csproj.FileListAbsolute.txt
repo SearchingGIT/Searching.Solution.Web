@@ -367,3 +367,4 @@ C:\Repository\projects\Searching1\Sourse Code\Searching.Solution.Web\Searching.S
 C:\Repository\projects\Searching1\Sourse Code\Searching.Solution.Web\Searching.Solution.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Repository\projects\Searching1\Sourse Code\Searching.Solution.Web\Searching.Solution.Web\obj\Debug\Searching.Solution.Web.dll
 C:\Repository\projects\Searching1\Sourse Code\Searching.Solution.Web\Searching.Solution.Web\obj\Debug\Searching.Solution.Web.pdb
+C:\Repository\projects\Searching1\Sourse Code\Searching.Solution.Web\Searching.Solution.Web\obj\Debug\Searching.Solution.Web.csprojResolveAssemblyReference.cache

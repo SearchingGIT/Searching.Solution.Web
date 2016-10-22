@@ -173,6 +173,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AnnController.cs" />
+    <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NavigationController.cs" />
@@ -270,6 +271,7 @@
     <Folder Include="Content\patterns\" />
     <Folder Include="Content\plugins\" />
     <Folder Include="Content\styles\" />
+    <Folder Include="Views\Message\" />
     <Folder Include="Views\Test\" />
   </ItemGroup>
   <ItemGroup>

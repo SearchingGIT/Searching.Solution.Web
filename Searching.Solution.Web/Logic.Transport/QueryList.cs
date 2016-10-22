@@ -128,5 +128,32 @@ namespace Searching.Solution.Web.Logic.Transport
             return result;
         }
 
+        public static async Task<ReturnValue> DeleteAnnouncing(int id)
+        {
+            ReturnValue result = new ReturnValue();
+            var param = JsonConvert.SerializeObject(new { Announcing_id = id });
+            var jsonResult = await AccessService.ServiceCalled("POST", "DeleteAnnouncing", param);
+            result = JsonConvert.DeserializeObject < ReturnValue > (jsonResult);
+            return result;
+        }
+
+        public static async Task<ReturnValue>AddMessage(Messages msg)
+        {
+            ReturnValue result = new ReturnValue();
+            var param = JsonConvert.SerializeObject(new { message = msg });
+            var jsonResult = await AccessService.ServiceCalled("POST", "AddMessage", param);
+            result = JsonConvert.DeserializeObject<ReturnValue>(jsonResult);
+            return result;
+        }
+
+        public static async Task<ReturnValue>EditProfile(UserList user)
+        {
+            ReturnValue result = new ReturnValue();
+            var param = JsonConvert.SerializeObject(new { user = user });
+            var jsonResult = await AccessService.ServiceCalled("POST", "EditProfile", param);
+            result = JsonConvert.DeserializeObject<ReturnValue>(jsonResult);
+            return result;
+        }
+
     }
 }
